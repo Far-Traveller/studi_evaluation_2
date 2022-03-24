@@ -1,0 +1,27 @@
+/************** variables **************/
+
+
+
+/************** base styles **************/
+
+
+
+/************** fonts **************/
+@font-face{
+    font-family: 'lato';
+    src: url('font/Lato-Regular.ttf');
+}
+p{
+    font-family: 'lato';
+}
+
+
+/************** mobile styles **************/
+
+
+
+
+/************** large tablets & laptop styles **************/
+@media screen and (min-width: 960px){
+    
+}
