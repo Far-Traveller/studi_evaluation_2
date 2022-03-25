@@ -23,11 +23,86 @@
 <!-- BODY -->
 
 <body>
+    <section id="new-game">
+        <button type="button" class="btn btn-light">
+            <i class="fas fa-plus-circle fa-lg"></i>
+            New game
+        </button>
+    </section>
 
-    <p>TEST</p>
+    <section id="tournament">
+        <div class="container grid">
+            <!-- player 1 name -->
+            <div class="players-name-container">
+                <p id="first-player-name" class="players-name">
+                    Player 1
+                </p>
+                <span id="first-player-turn"></span>
+            </div>
+            <!-- player 1 total score -->
+            <div class="players-total-container">
+                <p id="first-player-total" class="players-total">
+                    0
+                </p>
+            </div>
+            <!-- player 1 current score -->
+            <div class="players-current-container">
+                <p>Current</p>
+                <p id="first-player-current" class="players-current">
+                    0
+                </p>
+            </div>
 
-        <!-- jQuery et Popper CDN -->
-        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            <!-- Dice -->
+            <div class="dice-container">
+                <div class="dice fourth-face">
+                    <div class="dice-column">
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                    <div class="dice-column">
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+            </div>
+            <!-- Buttons to play -->
+            <button type="button" class="btn btn-light">
+                <i class="fas fa-sync fa-lg"></i>
+                Roll dice
+            </button>
+            <button type="button" class="btn btn-light">
+                <i class="fas fa-download fa-lg"></i>
+                Hold
+            </button>
+
+            <!-- player 2 name -->
+            <div class="players-name-container">
+                <p id="second-player-name" class="players-name">
+                    Player 2
+                </p>
+                <span id="second-player-turn"></span>
+            </div>
+            <!-- player 2 total score -->
+            <div class="players-total-container">
+                <p id="second-player-total" class="players-total">
+                    0
+                </p>
+            </div>
+            <!-- player 2 current score -->
+            <div class="players-current-container">
+                <p>Current</p>
+                <p id="second-player-current" class="players-current">
+                    0
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- jQuery et Popper CDN -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
