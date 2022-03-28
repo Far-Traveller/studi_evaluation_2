@@ -107,18 +107,30 @@ i{
     height: 20px;
     border-radius: 50%;
 }
-.six-face,
 .dice-column{
     display: flex;
     justify-content: space-between;
-}
-.dice-column {
     flex-direction: column;
 }
+.face-1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.face-2, .face-3, .face-4, .face-5, .face-6{
+    display: flex;
+    justify-content: space-between;
+}
+.face-2 .dot:nth-child(2), .face-3 .dot:nth-child(3){
+    align-self: flex-end;
+}
+.face-3 .dot:nth-child(2){
+    align-self: center;
+}
+.face-5 .dice-column:nth-of-type(2){
+    justify-content: center;
+}
 
-/****** ANIMATION FOR THE DICE ******/
-
-/****** DOT TO INDICATE CURRENT PLAYER ******/
 
 /****** STYLE FOR JS ******/
 .turn-player-1{
