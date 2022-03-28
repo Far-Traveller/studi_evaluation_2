@@ -121,9 +121,51 @@ i{
 
 /****** DOT TO INDICATE CURRENT PLAYER ******/
 
+/****** STYLE FOR JS ******/
+
 
 
 /************** large tablets & laptop styles **************/
-@media screen and (min-width: 960px){
+@media screen and (min-width: 994px){
+    .btn{
+        font-size: 1.4em;
+    }
+    #new-game{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
 
+    #first-player-grid{
+        grid-column: 1/4;
+    }
+    .players-name-container{
+        margin-top: 50px;
+    }
+    .players-name{
+        font-size: 3em;
+    }
+    .players-total-container{
+        margin-bottom: 100px;
+    }
+    .players-total{
+        font-size: 7em;
+    }
+    .players-current-container{
+        width: 50%;
+        margin: auto;
+    }
+
+    #dice-grid{
+        grid-column: 4/6;
+    }
+    .dice-container{
+        margin: 95px 0;
+    }
+    .btn-hold{
+        margin-top: 30px;
+    }
+
+    #second-player-grid{
+        grid-column: 6/9;
+    }
 }
