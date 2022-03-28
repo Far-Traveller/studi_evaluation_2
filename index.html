@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="icon" type="jpg" href="images/logo_onglet.jpg">
+    <link rel="icon" type="png" href="images/logo_onglet.png">
     <title>Le petit jeu du dé</title>
 
     <!-- Font Awesome -->
@@ -16,6 +16,10 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap" rel="stylesheet">
     <!-- CSS -->
     <link rel="stylesheet" href="stylesheets/style.css">
 </head>
@@ -32,71 +36,81 @@
 
     <section id="tournament">
         <div class="container grid">
-            <!-- player 1 name -->
-            <div class="players-name-container">
-                <p id="first-player-name" class="players-name">
-                    Player 1
-                </p>
-                <span id="first-player-turn"></span>
-            </div>
-            <!-- player 1 total score -->
-            <div class="players-total-container">
-                <p id="first-player-total" class="players-total">
-                    0
-                </p>
-            </div>
-            <!-- player 1 current score -->
-            <div class="players-current-container">
-                <p>Current</p>
-                <p id="first-player-current" class="players-current">
-                    0
-                </p>
-            </div>
-
-            <!-- Dice -->
-            <div class="dice-container">
-                <div class="dice fourth-face">
-                    <div class="dice-column">
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                    </div>
-                    <div class="dice-column">
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                    </div>
+            <div id="first-player-grid">
+                <!-- player 1 name -->
+                <div class="players-name-container">
+                    <p id="first-player-name" class="players-name">
+                        Player 1
+                    </p>
+                    <span id="first-player-turn"></span>
+                </div>
+                <!-- player 1 total score -->
+                <div class="players-total-container">
+                    <p id="first-player-total" class="players-total">
+                        0
+                    </p>
+                </div>
+                <!-- player 1 current score -->
+                <div class="players-current-container">
+                    <p>Current</p>
+                    <p id="first-player-current" class="players-current">
+                        0
+                    </p>
                 </div>
             </div>
-            <!-- Buttons to play -->
-            <button type="button" class="btn btn-light">
-                <i class="fas fa-sync fa-lg"></i>
-                Roll dice
-            </button>
-            <button type="button" class="btn btn-light">
-                <i class="fas fa-download fa-lg"></i>
-                Hold
-            </button>
 
-            <!-- player 2 name -->
-            <div class="players-name-container">
-                <p id="second-player-name" class="players-name">
-                    Player 2
-                </p>
-                <span id="second-player-turn"></span>
+            <div id="dice-grid">
+                <!-- Dice -->
+                <div class="dice-container">
+                    <div class="dice six-face">
+                        <div class="dice-column">
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                        <div class="dice-column">
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Buttons to play -->
+                <div class="btn-roll-dice">
+                    <button type="button" class="btn btn-light">
+                        <i class="fas fa-sync fa-lg"></i>
+                        Roll dice
+                    </button>
+                </div>
+                <div class="btn-hold">
+                    <button type="button" class="btn btn-light">
+                        <i class="fas fa-download fa-lg"></i>
+                        Hold
+                    </button>
+                </div>
             </div>
-            <!-- player 2 total score -->
-            <div class="players-total-container">
-                <p id="second-player-total" class="players-total">
-                    0
-                </p>
-            </div>
-            <!-- player 2 current score -->
-            <div class="players-current-container">
-                <p>Current</p>
-                <p id="second-player-current" class="players-current">
-                    0
-                </p>
+
+            <div id="second-player-grid">
+                <!-- player 2 name -->
+                <div class="players-name-container">
+                    <p id="second-player-name" class="players-name">
+                        Player 2
+                    </p>
+                    <span id="second-player-turn"></span>
+                </div>
+                <!-- player 2 total score -->
+                <div class="players-total-container">
+                    <p id="second-player-total" class="players-total">
+                        0
+                    </p>
+                </div>
+                <!-- player 2 current score -->
+                <div class="players-current-container">
+                    <p>Current</p>
+                    <p id="second-player-current" class="players-current">
+                        0
+                    </p>
+                </div>
             </div>
         </div>
     </section>
