@@ -50,7 +50,6 @@ i{
     text-align: center;
     padding: 5px;
 }
-
 .players-name-container{
     padding: 5px;
     display: flex;
@@ -122,6 +121,22 @@ i{
 /****** DOT TO INDICATE CURRENT PLAYER ******/
 
 /****** STYLE FOR JS ******/
+.turn-player-1{
+    background: linear-gradient(180deg, var(--lightgrey) 50%, var(--white) 50%);
+}
+.turn-player-2{
+    background: linear-gradient(180deg, var(--lightgrey) 50%, var(--white) 50%);
+}
+.dot-current-player{
+    height: 15px;
+    width: 15px;
+    background-color: var(--red);
+    border-radius: 50%;
+    margin-left: 20px;
+}
+.font-current-player{
+    font-weight: 400;
+}
 
 
 
@@ -167,5 +182,13 @@ i{
 
     #second-player-grid{
         grid-column: 6/9;
+    }
+
+    /****** STYLE FOR JS ******/
+    .turn-player-1{
+        background: linear-gradient(90deg, var(--lightgrey) 50%, var(--white) 50%);
+    }
+    .turn-player-2{
+        background: linear-gradient(90deg, var(--lightgrey) 50%, var(--white) 50%);
     }
 }
