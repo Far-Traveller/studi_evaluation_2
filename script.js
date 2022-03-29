@@ -38,9 +38,13 @@ let activePlayer;
 let activePlayerCurrent = 0;
 let activePlayerTotal = 0;
 
-let isGamePlaying = true;
-let player1;
-let player2;
+let isGamePlaying = false;
+let player1 = {
+    currentScore: firstPlayerCurrent,
+};
+let player2 = {
+    currentScore: secondPlayerCurrent,
+};;
 
 
 /**
@@ -48,12 +52,35 @@ let player2;
  */
 
 // play : restart game
+function newGame() {
 
+}
+btnNewGame.addEventListener('click', newGame);
 
 // roll
+function roll() {
+    if (isGamePlaying) {
+        let result = Math.floor((Math.random() * 6) + 1);
+        diceFace.innerHTML = dice6Faces[result - 1];
 
+        if (result !== 1) {
+            activePlayerCurrent += result;
+            activePlayer.currentScore.textContent = activePlayerCurrent;
+        } else {
+            activePlayerCurrent = 0;
+            activePlayer.currentScore.textContent = activePlayerCurrent;
+            nextRound();
+        }
+    }
+}
+btnRoll.addEventListener('click', roll);
 
 // hold
+function hold(){
+
+}
+btnHold.addEventListener('click', hold);
+
 
 // next round
 function nextRound() {
