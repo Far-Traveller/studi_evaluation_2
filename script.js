@@ -40,10 +40,16 @@ let activePlayerTotal = 0;
 
 let isGamePlaying = false;
 let player1 = {
-    currentScore: firstPlayerCurrent,
+    name: firstPlayerName,
+    current: firstPlayerCurrent,
+    total: firstPlayerTotal,
+    isWinner: false
 };
 let player2 = {
-    currentScore: secondPlayerCurrent,
+    name: secondPlayerName,
+    current: secondPlayerCurrent,
+    total: secondPlayerTotal,
+    isWinner: false
 };;
 
 
@@ -53,7 +59,7 @@ let player2 = {
 
 // play : restart game
 function newGame() {
-
+    
 }
 btnNewGame.addEventListener('click', newGame);
 
@@ -65,10 +71,10 @@ function roll() {
 
         if (result !== 1) {
             activePlayerCurrent += result;
-            activePlayer.currentScore.textContent = activePlayerCurrent;
+            activePlayer.current.textContent = activePlayerCurrent;
         } else {
             activePlayerCurrent = 0;
-            activePlayer.currentScore.textContent = activePlayerCurrent;
+            activePlayer.current.textContent = activePlayerCurrent;
             nextRound();
         }
     }
@@ -77,10 +83,27 @@ btnRoll.addEventListener('click', roll);
 
 // hold
 function hold(){
-
+    if (isGamePlaying) {
+        activePlayerTotal = Number(activePlayer.total.textContent) + activePlayerCurrent;
+        activePlayer.total.textContent = activePlayerTotal;
+        activePlayerCurrent = 0;
+        activePlayer.current.textContent = activePlayerCurrent;
+        
+        if (activePlayerTotal < 10) {
+            nextRound();
+        } else {
+            activePlayer.isWinner = true;
+            isGamePlaying = false;
+            messageWinner();
+        }
+    }
 }
 btnHold.addEventListener('click', hold);
 
+// Modal to tell who won
+function messageWinner(){
+    window.alert('congrats player, you win!');
+}
 
 // next round
 function nextRound() {
