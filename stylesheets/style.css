@@ -137,7 +137,7 @@ i{
     background: linear-gradient(180deg, var(--lightgrey) 50%, var(--white) 50%);
 }
 .turn-player-2{
-    background: linear-gradient(180deg, var(--lightgrey) 50%, var(--white) 50%);
+    background: linear-gradient(180deg, var(--white) 50%, var(--lightgrey) 50%);
 }
 .dot-current-player{
     height: 15px;
@@ -201,6 +201,6 @@ i{
         background: linear-gradient(90deg, var(--lightgrey) 50%, var(--white) 50%);
     }
     .turn-player-2{
-        background: linear-gradient(90deg, var(--lightgrey) 50%, var(--white) 50%);
+        background: linear-gradient(90deg, var(--white) 50%, var(--lightgrey) 50%);
     }
 }
