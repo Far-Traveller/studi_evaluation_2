@@ -59,7 +59,21 @@ let player2 = {
 
 // play : restart game
 function newGame() {
+    isGamePlaying = true;
+    firstPlayerCurrent.textContent = 0;
+    firstPlayerTotal.textContent = 0;
+    secondPlayerCurrent.textContent = 0;
+    secondPlayerTotal.textContent = 0;
     
+    activePlayer = player1;
+
+    playerBackground.classList.remove('turn-player-2');
+    secondPlayerTurn.classList.remove('dot-current-player');
+    secondPlayerName.classList.remove('font-current-player');
+
+    playerBackground.classList.add('turn-player-1');
+    firstPlayerTurn.classList.add('dot-current-player');
+    firstPlayerName.classList.add('font-current-player');
 }
 btnNewGame.addEventListener('click', newGame);
 
