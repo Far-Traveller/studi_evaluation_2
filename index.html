@@ -28,7 +28,7 @@
 
 <body class="player-backgound">
     <section id="new-game">
-        <button type="button" class="btn btn-light">
+        <button type="button" class="btn btn-light" id="btn-new-game">
             <i class="fas fa-plus-circle fa-lg"></i>
             New game
         </button>
@@ -76,14 +76,14 @@
                     </div>
                 </div>
                 <!-- Buttons to play -->
-                <div class="btn-roll-dice">
-                    <button type="button" class="btn btn-light">
+                <div>
+                    <button type="button" class="btn btn-light" id="btn-roll">
                         <i class="fas fa-sync fa-lg"></i>
                         Roll dice
                     </button>
                 </div>
-                <div class="btn-hold">
-                    <button type="button" class="btn btn-light">
+                <div class="btn-hold-container">
+                    <button type="button" class="btn btn-light" id="btn-hold">
                         <i class="fas fa-download fa-lg"></i>
                         Hold
                     </button>
@@ -125,6 +125,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
+
+    <!-- Script JS -->
+    <script src="script.js"></script>
 </body>
 
 </html>
