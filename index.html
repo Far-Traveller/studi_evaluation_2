@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" type="png" href="images/logo_onglet.png">
-    <title>Le petit jeu du dé</title>
+    <title>Dice Wars</title>
 
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/06ea113519.js" crossorigin="anonymous"></script>
@@ -115,8 +115,32 @@
         </div>
     </section>
 
+    <!-- Modals -->
+    <div class="modal" tabindex="-1" id="modal-rules">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <i class="fas fa-book-open fa-lg modal-header-i"></i>
+                    <h5 class="modal-title">Rules</h5>
+                    <i class="fas fa-book-open fa-lg modal-header-i"></i>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><i class="fas fa-times"></i></span>
+                    </button>
+                </div>
+                <div class="modal-body modal-rules-body">
+                    <p class="modal-goal">Your goal si easy: reach <span>100 points</span> to win the game</p>
+                    <p>During your turn, you can decide at any time to:</p>
+                    <ul>
+                        <li><span>Click on the Roll Dice button:</span> each result will be added to your current score <span>BUT</span> if you roll a 1, your current score is lost and your turn is over (so don't forget to hold once in a while)</li>
+                        <li><span>Click on the Hold button:</span> which sends the points of your current score to the total one and your turn is over</li>
+                    </ul>
+                    <p>Good luck and don't be too greedy <i class="fas fa-grin-wink"></i></p>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <div class="modal" tabindex="-1" id="myModal">
+    <div class="modal" tabindex="-1" id="modal-winner">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -126,13 +150,13 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <p class="modal-p">The winner is
-                    </p>
+                    <p class="modal-winner-p">The winner is</p>
                     <p id="winner-name"></p>
                 </div>
             </div>
         </div>
     </div>
+
 
     <!-- jQuery et Popper CDN -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"

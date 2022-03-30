@@ -75,8 +75,15 @@ function newGame() {
     playerBackground.classList.add('turn-player-1');
     firstPlayerTurn.classList.add('dot-current-player');
     firstPlayerName.classList.add('font-current-player');
+
+    modalRules();
 }
 btnNewGame.addEventListener('click', newGame);
+
+// modal for the rules
+function modalRules(){
+    $('#modal-rules').modal('show');
+}
 
 // roll
 function roll() {
@@ -109,18 +116,17 @@ function hold(){
         } else {
             activePlayer.isWinner = true;
             isGamePlaying = false;
-            messageWinner();
+            modalWinner();
         }
     }
 }
 btnHold.addEventListener('click', hold);
 
 // modal to tell who won
-function messageWinner(){
+function modalWinner(){
     winnerName.textContent = activePlayer.name.textContent;
-    $('#myModal').modal('show');
+    $('#modal-winner').modal('show');
 }
-
 
 // next round
 function nextRound() {
