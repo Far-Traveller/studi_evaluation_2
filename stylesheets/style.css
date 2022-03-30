@@ -1,0 +1,256 @@
+/************** variables **************/
+:root{
+    --red: rgb(234, 77, 76);
+    --lightgrey: rgb(228, 228, 228);
+    --darkgrey: rgb(70, 70, 70);
+    --white: rgb(255, 255, 255);
+    --shadow: rgb(190, 190, 190);
+}
+
+/************** base styles + fonts **************/
+body{
+    padding: 30px 20px;
+}
+p, .btn, h5, li{
+    font-family: 'Lato', sans-serif;
+    color: var(--darkgrey);
+}
+p, .btn, h5{
+    text-transform: uppercase;
+}
+.btn{
+    background-color:transparent;
+    border-color: transparent;
+    font-weight: 300;
+    font-size: 1.2em;
+}
+i{
+    color: var(--red);
+    padding-right: 10px;
+}
+
+/************** mobile styles **************/
+#new-game{
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+}
+
+#tournament{
+    padding: 5px;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 10px;
+    box-sizing: border-box;
+}
+
+#first-player-grid, #dice-grid, #second-player-grid{
+    grid-column: 1/9;
+    text-align: center;
+    padding: 5px;
+}
+.players-name-container{
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.players-name{
+    font-size: 2.5em;
+    font-weight: 100;
+    margin-bottom: 0;
+}
+.players-total-container{
+    padding: 5px;
+    vertical-align: top;
+}
+.players-total{
+    color: var(--red);
+    font-size: 5em;
+    font-weight: 300;
+    height: 1em;
+    line-height: 1em;
+    margin-bottom: 30px;
+}
+.players-current-container{
+    background-color: var(--red);
+    padding: 5px 0;
+    font-size: 1em;
+}
+.players-current-container p{
+    margin-bottom: 0;
+}
+.players-current{
+    color: var(--white);
+    font-size: 2.5em;
+    font-weight: 300;
+}
+.dice-container{
+    padding: 20px;
+}
+.dice{
+    background-color: var(--white);
+    box-shadow: 0px 0px 20px 0px var(--shadow);
+    height: 140px;
+    width: 140px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10%;
+}
+
+/****** ALL DICE FACES ******/
+.dot {
+    background-color: var(--red);
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+.dice-column{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.face-1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.face-2, .face-3, .face-4, .face-5, .face-6{
+    display: flex;
+    justify-content: space-between;
+}
+.face-2 .dot:nth-child(2), .face-3 .dot:nth-child(3){
+    align-self: flex-end;
+}
+.face-3 .dot:nth-child(2){
+    align-self: center;
+}
+.face-5 .dice-column:nth-of-type(2){
+    justify-content: center;
+}
+
+
+/****** STYLE FOR JS ******/
+.turn-player-1{
+    background: linear-gradient(180deg, var(--lightgrey) 50%, var(--white) 50%);
+}
+.turn-player-2{
+    background: linear-gradient(180deg, var(--white) 50%, var(--lightgrey) 50%);
+}
+.dot-current-player{
+    height: 15px;
+    width: 15px;
+    background-color: var(--red);
+    border-radius: 50%;
+    margin-left: 20px;
+}
+.font-current-player{
+    font-weight: 400;
+}
+
+/****** MODALS ******/
+.modal-body{
+    text-align: center;
+    font-weight: 300;
+}
+.modal-header-i{
+    margin: auto 10px;
+    padding: 0;
+}
+.modal-title{
+    font-size: 2em;
+    font-weight: 300;
+}
+.modal-goal{
+    color: var(--red);
+    font-style: italic;
+    margin: 15px 0;
+}
+.modal-body span{
+    font-weight: 400;
+    color: var(--red);
+}
+.modal-rules-body p:nth-child(2){
+    margin-top: 50px;
+}
+li{
+    padding: 10px 0;
+}
+.modal-rules-body p:nth-child(4){
+    margin-top: 50px;
+}
+.modal-img{
+    height: 150px;
+    margin: auto;
+}
+.modal-winner-p{
+    font-size: 1.5em;
+    font-weight: 300;
+}
+#winner-name{
+    font-size: 2.2em;
+    color: var(--red);
+}
+
+/************** large tablets & laptop styles **************/
+@media screen and (min-width: 994px){
+    .btn{
+        font-size: 1.4em;
+    }
+    #new-game{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    #first-player-grid{
+        grid-column: 1/4;
+    }
+    .players-name-container{
+        margin-top: 50px;
+    }
+    .players-name{
+        font-size: 3em;
+    }
+    .players-total-container{
+        margin-bottom: 100px;
+    }
+    .players-total{
+        font-size: 7em;
+    }
+    .players-current-container{
+        width: 50%;
+        margin: auto;
+    }
+
+    #dice-grid{
+        grid-column: 4/6;
+    }
+    .dice-container{
+        margin: 95px 0;
+    }
+    .btn-hold-container{
+        margin-top: 30px;
+    }
+
+    #second-player-grid{
+        grid-column: 6/9;
+    }
+
+    /****** STYLE FOR JS ******/
+    .turn-player-1{
+        background: linear-gradient(90deg, var(--lightgrey) 50%, var(--white) 50%);
+    }
+    .turn-player-2{
+        background: linear-gradient(90deg, var(--white) 50%, var(--lightgrey) 50%);
+    }
+
+
+    /****** MODAL ******/
+    .modal-img{
+        height: 220px;
+    }
+}
