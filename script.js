@@ -53,7 +53,6 @@ let player2 = {
     isWinner: false
 };;
 
-
 /**
  * Functions
  */
@@ -90,7 +89,6 @@ function roll() {
     if (isGamePlaying) {
         let result = Math.floor((Math.random() * 6) + 1);
         diceFace.innerHTML = dice6Faces[result - 1];
-
         if (result !== 1) {
             activePlayerCurrent += result;
             activePlayer.current.textContent = activePlayerCurrent;
@@ -110,8 +108,7 @@ function hold(){
         activePlayer.total.textContent = activePlayerTotal;
         activePlayerCurrent = 0;
         activePlayer.current.textContent = activePlayerCurrent;
-        
-        if (activePlayerTotal < 10) {
+        if (activePlayerTotal < 100) {
             nextRound();
         } else {
             activePlayer.isWinner = true;
