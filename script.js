@@ -5,6 +5,7 @@
 // Players names
 let firstPlayerName = document.getElementById('first-player-name');
 let secondPlayerName = document.getElementById('second-player-name');
+let winnerName = document.getElementById('winner-name');
 
 // Current player
 let playerBackground = document.getElementById('player-background');
@@ -114,10 +115,12 @@ function hold(){
 }
 btnHold.addEventListener('click', hold);
 
-// Modal to tell who won
+// modal to tell who won
 function messageWinner(){
-    window.alert('congrats player, you win!');
+    winnerName.textContent = activePlayer.name.textContent;
+    $('#myModal').modal('show');
 }
+
 
 // next round
 function nextRound() {
